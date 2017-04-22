@@ -9,9 +9,9 @@ import com.snowcattle.game.db.service.jdbc.entity.Order;
 public class ObjectTest {
 
     public static void main(String[] args) throws InterruptedException {
-        int maxSize = 1000000;
+        int maxSize = 10000;
         AbstractEntity[] abstractEntity = new AbstractEntity[maxSize];
-        for(int i = 0; i < 1000000; i++){
+        for(int i = 0; i < 10000; i++){
             Order order = new Order();
             order.setId((long)i);
             order.setUserId(10);
@@ -19,6 +19,6 @@ public class ObjectTest {
             abstractEntity[i] = order;
         }
 
-        Thread.sleep(10000000);
+        Thread.sleep(10000);
     }
 }
